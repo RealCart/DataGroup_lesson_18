@@ -16,6 +16,11 @@ class HomeScreen extends StatelessWidget {
                 "Это планшет",
                 style: Theme.of(context).textTheme.bodyMedium,
               );
+            } else if (DeviceTypeUtil.isMobile(context)) {
+              return Text(
+                "Это телефон",
+                style: Theme.of(context).textTheme.bodyMedium,
+              );
             }
 
             return SizedBox.shrink();
@@ -37,12 +42,20 @@ class HomeScreen extends StatelessWidget {
                 height: 50.0,
               ),
             ),
+            Positioned.fill(
+              child: Image.network(
+                "https://app.rekassa.kz/static/onboarding1.png",
+                fit: BoxFit.scaleDown,
+                width: 400.0,
+                height: 400.0,
+              ),
+            ),
             Positioned(
               right: 0.0,
               top: 0.0,
               bottom: 0.0,
               child: SvgPicture.network(
-                "https://app.rekassa.kz/static/icons/left-shape.svg",
+                "https://app.rekassa.kz/static/icons/right-shape.svg",
                 fit: BoxFit.scaleDown,
                 width: 50.0,
                 height: 50.0,

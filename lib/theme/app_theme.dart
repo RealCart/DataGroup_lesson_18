@@ -6,6 +6,9 @@ class AppTheme {
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.white,
     ),
+    cardTheme: CardThemeData(
+      color: const Color.fromARGB(222, 255, 224, 224),
+    ),
     textTheme: TextTheme(
       bodyMedium: TextStyle(
         fontSize: 20.0,
